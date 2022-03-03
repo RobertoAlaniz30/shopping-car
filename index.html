@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --white: #FFFFFF;
+            --black: #000000;
+            --orange: #F5B041;
+            --very-light-pink: #C7C7C7;
+            --text-input-field: #F7F7F7;
+            --hospital-green: #ACD9B2;
+            --sm: 14px;
+            --md: 16px;
+            --lg: 18px;
+          }
+          main {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+          }
+          hr {
+              color:#000000
+          }
+
+          h2 {
+              text-align: center;
+          }
+          body {
+            background: #EAFAF1;
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+          }
+          .card-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto auto auto;
+            gap: 80px;
+            justify-content: center;
+            align-items: center;
+          }
+          img {
+            width: 240px;
+            height: 240px;
+            border-radius: 20px;
+            object-fit: cover;
+          }
+          .button{
+            height: 40px;
+            background-color: var(--black);
+            color: var(--white);
+            border: none;
+            border-radius: 8px;
+            margin-bottom: 24px;
+            cursor: pointer;
+            font-size: var(--md);
+            font-weight: bold;
+            width: 100%
+            
+        }
+        table {
+            border-radius: 8px;
+            color: var(--orange);
+            background-color: #D5F5E3;
+            text-align: center;
+            border-collapse: collapse;
+            width: 500px;
+            height: 100px;
+        }
+        th, th{
+            padding: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h2>CARRITO DE COMPRA</h2>
+        <br>
+            <hr>
+        </br>
+        <div class="card-container" id="items">
+        </div>
+        <div class="table-container" id="table">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="th">#</th>
+                        <th class="th">Producto</th>
+                        <th class="th">Precio</th>
+                        <th class="th">Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+                <tfoot id="tfoot"></tfoot>
+            </table>
+        </div>
+    </main>
+  
+
+    
+    <template id="template-card">
+        <div id="div-card">
+            <img src="" >
+            <div class="info">
+                <h4>Titulo</h4>
+                <p>Costo</p>
+                <button id="button" class="button" value="comprar">Comprar</button>
+            </div>
+        </div>
+    </template>
+    
+    
+    <template id="template-tbody">
+        <tr>
+            <td class="td"></td>
+            <td class="td"></td>
+            <td class="td"></td>
+            <td class="td"></td>
+        </tr>
+    </template>
+    <template id="template-tbody">
+        <tr>
+            <td class="td"></td>
+            <td class="td"></td>
+            <td class="td"></td>
+            <td class="td"></td>
+        </tr>
+    </template>
+
+    <template id="template-tfoot">
+        <tr>
+            <td>Total de productos</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </template>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
